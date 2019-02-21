@@ -1,13 +1,12 @@
-import Link from "next/link";
+import Logo from "../components/Logo";
+import NavigationBar from "../components/NavigationBar";
 import "../sass/_main.scss";
 import css from "./styles.scss";
 
 const Index = () => (
-  <div className={css.example}>
-    <h1>Interfacers</h1>
-    <Link href="/about">
-      <a>About</a>
-    </Link>
+  <div className={css.layout}>
+    <Logo />
+    <NavigationBar />
   </div>
 );
 

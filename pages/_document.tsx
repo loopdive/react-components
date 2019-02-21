@@ -1,11 +1,24 @@
 import Document, { Head, Main, NextScript } from "next/document";
-import "../sass/_main.scss";
 
 export default class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head />
+        <Head>
+          <style>
+            {" "}
+            {`
+              @font-face {
+                font-family: 'Foo';
+                src: url('./static/foo.ttf');
+              }
+
+              body {
+                font-family: 'Foo';
+              }
+            `}
+          </style>
+        </Head>
         <body>
           <Main />
           <NextScript />
