@@ -19,9 +19,12 @@
     "lint:css": "stylelint \"sass/**/*.scss\" --cache",
     "lint": "concurrently \"yarn lint:js\" \"yarn lint:css\"",
     "precommit": "lint-staged",
-    "prepush": "yarn lint"
+    "prepush": "yarn lint",
+    "storybook": "start-storybook -p 9009 -s public",
+    "storybook:build": "build-storybook -s public"
   },
   "devDependencies": {
+    "@storybook/react": "^4.1.13",
     "@types/next": "^8.0.1",
     "@types/react": "^16.8.4",
     "@types/react-dom": "^16.8.2",

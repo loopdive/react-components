@@ -4,7 +4,7 @@ import css from "./styles.scss";
 
 const Index = () => (
   <div className={css.example}>
-    <p>Hello Djavan!</p>
+    <h1>Interfacers</h1>
     <Link href="/about">
       <a>About</a>
     </Link>
