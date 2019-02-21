@@ -14,11 +14,77 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint:js": "eslint pages --cache",
+    "lint:css": "stylelint \"sass/**/*.scss\" --cache",
+    "lint": "concurrently \"yarn lint:js\" \"yarn lint:css\"",
+    "precommit": "lint-staged",
+    "prepush": "yarn lint"
   },
   "devDependencies": {
     "@types/next": "^8.0.1",
     "@types/react": "^16.8.4",
-    "@types/react-dom": "^16.8.2"
+    "@types/react-dom": "^16.8.2",
+    "concurrently": "^4.1.0",
+    "eslint-config-react-app": "^3.0.7",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.4",
+    "prettier": "^1.16.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-sass-guidelines": "^5.3.0",
+    "stylelint-no-unsupported-browser-features": "^3.0.2"
+  },
+  "browserslist": [
+    ">1% in DE",
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "last 2 iOS versions",
+    "last 2 ChromeAndroid versions",
+    "last 2 Opera versions",
+    "ie >= 11",
+    "not op_mini all"
+  ],
+  "lint-staged": {
+    "src/**/*.{json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint",
+      "test:staged",
+      "git add"
+    ],
+    "src/**/*.{css,scss}": [
+      "prettier --write",
+      "stylelint",
+      "git add"
+    ]
+  },
+  "stylelint": {
+    "plugins": "stylelint-no-unsupported-browser-features",
+    "extends": [
+      "stylelint-config-recommended"
+    ],
+    "syntax": "scss",
+    "rules": {
+      "declaration-colon-newline-after": null,
+      "plugin/no-unsupported-browser-features": [
+        true,
+        {
+          "severity": "warning",
+          "ignore": [
+            "outline",
+            "flexbox",
+            "css-appearance"
+          ]
+        }
+      ],
+      "at-rule-no-unknown": null,
+      "no-empty-source": null
+    }
   }
 }
