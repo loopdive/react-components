@@ -7,7 +7,6 @@ module.exports = withTypescript(
     webpack(config, options) {
       return config;
     },
-    cssModules: true,
-    sassLoaderOptions: {}
+    cssModules: false
   })
 );

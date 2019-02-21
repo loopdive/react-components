@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "../sass/_main.scss";
 import css from "./styles.scss";
 
 const Index = () => (
