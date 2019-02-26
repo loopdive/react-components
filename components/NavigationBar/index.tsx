@@ -1,8 +1,7 @@
-import Link from "next/link";
-import css from "./styles.scss";
+import Link from 'next/link';
 
 const NavigationBar = () => (
-  <div className={css.layout}>
+  <div>
     <Link href="/about">
       <a>About</a>
     </Link>
