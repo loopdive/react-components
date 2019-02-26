@@ -4,21 +4,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head>
-          <style>
-            {" "}
-            {`
-              @font-face {
-                font-family: 'Foo';
-                src: url('./static/foo.ttf');
-              }
-
-              body {
-                font-family: 'Foo';
-              }
-            `}
-          </style>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
