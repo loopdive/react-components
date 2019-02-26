@@ -1,4 +1,4 @@
-const media = (em: string, content: string) => {
+const media = (content: string, em: string) => {
   return `@media screen and (${content}: ${em})`;
 };
 
