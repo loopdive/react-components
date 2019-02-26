@@ -1,14 +1,17 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-const NavigationBar = () => (
-  <About>
-    <Link href="/about">
-      <LinkElement>About</LinkElement>
-    </Link>
+interface Props {
+  items: { label: string; route: string }[];
+}
 
-    <LinkElement>Work</LinkElement>
-    <LinkElement>Contact</LinkElement>
+const NavigationBar = ({ items }: Props) => (
+  <About>
+    {items.map(({ label, route }) => (
+      <Link key={route} href={route}>
+        <LinkElement>{label}</LinkElement>
+      </Link>
+    ))}
   </About>
 );
 

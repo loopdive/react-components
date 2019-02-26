@@ -8,7 +8,7 @@ export default () => {
   return (
     <TopBar>
       <Logo />
-      <NavigationBar />
+      <NavigationBar items={items} />
     </TopBar>
   );
 };
@@ -17,3 +17,18 @@ const TopBar = styled.div`
   display: flex;
   align-items: baseline;
 `;
+
+const items = [
+  {
+    label: "About",
+    route: "/about"
+  },
+  {
+    label: "Work",
+    route: "/work"
+  },
+  {
+    label: "Contact",
+    route: "/contact"
+  }
+];

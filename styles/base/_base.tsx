@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
         background-attachment: fixed;
         font-family: ${fontFamily};
         font-size: ${defaultFontSize}rem; 
-        color: ${colorBlack}   
+        color: ${colorBlack}
     }
 `;
 
