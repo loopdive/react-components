@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import styled from 'styled-components';
+import Link from "next/link";
+import styled from "styled-components";
 
 const NavigationBar = () => (
   <About>
@@ -20,6 +20,7 @@ const LinkElement = styled.a`
   color: red;
   padding: 0 1rem;
   cursor: pointer;
+  float: right;
 `;
 
 export default NavigationBar;

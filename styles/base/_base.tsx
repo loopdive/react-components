@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 // prettier-ignore
 import {
   defaultFontSize, fontFace, fontFamily, colorBlack
