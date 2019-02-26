@@ -1,12 +1,10 @@
-import GlobalStyle from "../styles/base/_base";
-import Logo from "../components/Logo";
-import NavigationBar from "../components/NavigationBar";
+import GlobalStyle from '../styles/base/_base';
+import TopBar from '../components/TopBar';
 
 const Index = () => (
   <div>
     <GlobalStyle />
-    <Logo />
-    <NavigationBar />
+    <TopBar />
   </div>
 );
 

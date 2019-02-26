@@ -4,8 +4,6 @@ import {
   defaultFontSize, fontFace, fontFamily, colorBlack
 } from '../abstract/_variables';
 
-import { respond } from '../abstract/_functions';
-
 const GlobalStyle = createGlobalStyle`
     ${fontFace}
 
@@ -26,12 +24,7 @@ const GlobalStyle = createGlobalStyle`
 
     html {
         font-size: 62.5%;
-
-        ${respond('tab-land', 'font-size: 56.25%;')}
-        ${respond('tab-port', 'font-size: 50%;')}
-        ${respond('phone', 'font-size: 43.75%;')}
-        ${respond('big-device', 'font-size: 75%;')}
-        
+       
     }
 
     body {

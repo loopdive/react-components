@@ -11,3 +11,10 @@ export const responsiveMargins = () => {
     ${respond('tab-land', 'width: 70%')}
   `;
 };
+
+export const deviceBreakpoints = `
+  ${respond('tab-land', 'font-size: 56.25%;')}
+  ${respond('tab-port', 'font-size: 50%;')}
+  ${respond('phone', 'font-size: 43.75%;')}
+  ${respond('big-device', 'font-size: 75%;')}
+`;

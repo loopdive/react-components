@@ -1,11 +1,25 @@
 import Link from 'next/link';
+import styled from 'styled-components';
 
 const NavigationBar = () => (
-  <div>
+  <About>
     <Link href="/about">
-      <a>About</a>
+      <LinkElement>About</LinkElement>
     </Link>
-  </div>
+
+    <LinkElement>Work</LinkElement>
+    <LinkElement>Contact</LinkElement>
+  </About>
 );
+
+const About = styled.nav`
+  width: 70%;
+`;
+
+const LinkElement = styled.a`
+  color: red;
+  padding: 0 1rem;
+  cursor: pointer;
+`;
 
 export default NavigationBar;

@@ -8,8 +8,9 @@ const Logo = () => (
 
 const H1 = styled.h1`
   color: white;
-  font-size: 4.5rem;
-  padding: 2rem;
+  font-size: 2.5rem;
+  padding: 0 1rem;
+  width: 30%;
 `;
 
 export default Logo;
