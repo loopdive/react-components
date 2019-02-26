@@ -17,13 +17,14 @@ const NavigationBar = ({ items }: Props) => (
 
 const About = styled.nav`
   width: 70%;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 const LinkElement = styled.a`
   color: red;
   padding: 0 1rem;
   cursor: pointer;
-  float: right;
 `;
 
 export default NavigationBar;
