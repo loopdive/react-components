@@ -1,10 +1,10 @@
+import GlobalStyle from "../styles/base/_base";
 import Logo from "../components/Logo";
 import NavigationBar from "../components/NavigationBar";
-import "../sass/_main.scss";
-import css from "./styles.scss";
 
 const Index = () => (
-  <div className={css.layout}>
+  <div>
+    <GlobalStyle />
     <Logo />
     <NavigationBar />
   </div>
