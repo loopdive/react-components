@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-const Logo = () => (
-  <div>
-    <H1>interfacers</H1>
-  </div>
-);
+const Logo = () => <H1>interfacers</H1>;
 
 const H1 = styled.h1`
   color: white;
