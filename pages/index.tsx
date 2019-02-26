@@ -1,5 +1,5 @@
-import GlobalStyle from '../styles/base/_base';
-import TopBar from '../components/TopBar';
+import GlobalStyle from "../styles/base/_base";
+import TopBar from "../components/elements/TopBar";
 
 const Index = () => (
   <div>

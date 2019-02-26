@@ -1,15 +1,9 @@
 import { respond } from "./_functions";
-import styled from "styled-components";
 
-export const flexCenterCenter = () => {
-  return `display: flex; justify-content: center; align-items: center;`;
-};
-
-export const Margins = styled.div`
-  width: 90%;
-  margin: 0 auto;
-  transition: width 0.2s;
-  ${respond("tab-land", "width: 80%")}
+export const flexCenterCenter = `
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 `;
 
 export const deviceBreakpoints = `
