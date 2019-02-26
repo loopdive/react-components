@@ -3,13 +3,16 @@ import styled from "styled-components";
 
 import Logo from "../Logo";
 import NavigationBar from "../NavigationBar";
+import { Margins } from "../../styles/abstract/_mixins";
 
 export default () => {
   return (
-    <TopBar>
-      <Logo />
-      <NavigationBar items={items} />
-    </TopBar>
+    <Margins>
+      <TopBar>
+        <Logo />
+        <NavigationBar items={items} />
+      </TopBar>
+    </Margins>
   );
 };
 

@@ -1,16 +1,16 @@
 import { respond } from "./_functions";
+import styled from "styled-components";
 
 export const flexCenterCenter = () => {
   return `display: flex; justify-content: center; align-items: center;`;
 };
 
-export const responsiveMargins = () => {
-  return `
-    width: 90%; 
-    margin: 0 auto; 
-    ${respond("tab-land", "width: 70%")}
-  `;
-};
+export const Margins = styled.div`
+  width: 90%;
+  margin: 0 auto;
+  transition: width 0.2s;
+  ${respond("tab-land", "width: 80%")}
+`;
 
 export const deviceBreakpoints = `
   ${respond("tab-land", "font-size: 56.25%;")}
