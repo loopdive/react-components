@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { defaultFontSize, largeFontSize } from "../styles";
 
-import DragAndDropBackground from "../DragAndDropBackground";
+import DragAndDropBackground from "../../../hoc/DragAndDropBackground";
 
 export default ({
   headline,
@@ -15,11 +15,8 @@ export default ({
     <Layout>
       <EmptySpace />
       <Title>
-        <DragAndDropBackground />
-        <Span>
-          <Head contentEditable>{headline}</Head>
-          <Sub>{subtitle}</Sub>
-        </Span>
+        <Head>{headline}</Head>
+        <Sub>{subtitle}</Sub>
       </Title>
     </Layout>
   );
@@ -33,21 +30,18 @@ const Layout = styled.div`
   align-items: center;
 `;
 
-const Title = styled.div`
+const Title = DragAndDropBackground(styled.div`
   /* border: 1px solid green; */
   position: relative;
   flex: 1;
   min-width: 400px;
-`;
+  ${(props: { background: any }) => props.background}
+`);
 
 const EmptySpace = styled.div`
   display: flex;
   flex: 1 0;
   /* border: 1px solid blue; */
-`;
-
-const Span = styled.span`
-  position: relative;
 `;
 
 const Head = styled.h1`
