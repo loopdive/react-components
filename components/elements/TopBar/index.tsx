@@ -16,7 +16,7 @@ export default () => {
 const TopBar = styled.div`
   height: 10rem;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
 `;
 

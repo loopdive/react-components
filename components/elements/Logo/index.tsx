@@ -13,9 +13,10 @@ const Logo = styled.div`
   font-size: ${mediumFontSize};
   padding: 2rem;
   width: 30%;
+  display: flex;
+  align-items: center;
 `;
 
 const Span = styled.span`
   color: red;
 `;
-
