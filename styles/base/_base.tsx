@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 // prettier-ignore
 import {
-  defaultFontSize, fontFace, fontFamily, colorBlack
+  defaultFontSize, fontFace, fontFamily, colorWhite
 } from '../abstract/_variables';
 
 const GlobalStyle = createGlobalStyle`
@@ -34,8 +34,8 @@ const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;
         background-attachment: fixed;
         font-family: ${fontFamily};
-        font-size: ${defaultFontSize}rem; 
-        color: ${colorBlack}
+        font-size: ${defaultFontSize}; 
+        color: ${colorWhite}
     }
 `;
 

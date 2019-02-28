@@ -1,12 +1,12 @@
 import styled from "styled-components";
+import { mediumFontSize } from "../styles";
 
-const Logo = () => <H1>interfacers</H1>;
+export default () => <Logo>interfacers</Logo>;
 
-const H1 = styled.h1`
+const Logo = styled.div`
+  height: inherit;
   color: white;
-  font-size: 2.5rem;
-  padding: 0 1rem;
+  font-size: ${mediumFontSize};
+  padding: 2rem;
   width: 30%;
 `;
-
-export default Logo;

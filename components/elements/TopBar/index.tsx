@@ -3,35 +3,33 @@ import styled from "styled-components";
 
 import Logo from "../Logo";
 import NavigationBar from "../NavigationBar";
-import { Margins } from "../../layouts/Margins";
 
 export default () => {
   return (
-    <Margins>
-      <TopBar>
-        <Logo />
-        <NavigationBar items={items} />
-      </TopBar>
-    </Margins>
+    <TopBar>
+      <Logo />
+      <NavigationBar items={items} />
+    </TopBar>
   );
 };
 
 const TopBar = styled.div`
+  height: 10rem;
   display: flex;
   align-items: baseline;
 `;
 
 const items = [
   {
-    label: "About",
+    label: "about",
     route: "/about"
   },
   {
-    label: "Work",
+    label: "work",
     route: "/work"
   },
   {
-    label: "Contact",
+    label: "contact",
     route: "/contact"
   }
 ];
