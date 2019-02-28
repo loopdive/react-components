@@ -17,6 +17,7 @@ const TopBar = styled.div`
   height: 10rem;
   display: flex;
   align-items: baseline;
+  justify-content: center;
 `;
 
 const items = [

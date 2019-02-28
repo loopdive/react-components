@@ -1,6 +1,7 @@
+import { css } from "styled-components";
 import { respond } from "./_functions";
 
-export const flexCenterCenter = `
+export const flexCenterCenter = css`
   display: flex; 
   justify-content: center;
   align-items: center;
