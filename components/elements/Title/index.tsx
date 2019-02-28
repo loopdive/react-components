@@ -4,13 +4,19 @@ import { defaultFontSize, largeFontSize } from "../styles";
 
 import DragAndDropBackground from "../../../hoc/DragAndDropBackground";
 
-export default () => {
+export default ({
+  headline,
+  subtitle
+}: {
+  headline: string;
+  subtitle: string;
+}) => {
   return (
     <Layout>
       <EmptySpace />
       <Title>
-        <Head>native web apps</Head>
-        <Sub>web apps that feel native </Sub>
+        <Head>{headline}</Head>
+        <Sub>{subtitle}</Sub>
       </Title>
     </Layout>
   );
@@ -41,6 +47,7 @@ const EmptySpace = styled.div`
 const Head = styled.h1`
   font-size: ${largeFontSize};
   margin-bottom: 2rem;
+  outline: none;
 `;
 
 const Sub = styled.p`

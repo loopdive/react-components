@@ -18,5 +18,5 @@ const Logo = styled.div`
 `;
 
 const Span = styled.span`
-  color: red;
+
 `;
