@@ -52,7 +52,7 @@ const LinkElement = styled.a`
 
   &:hover::after {
     width: 100%;
-    transition: 0.2s;
+    transition: 0.3s;
   }
 
   &:hover {

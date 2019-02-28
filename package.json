@@ -9,6 +9,7 @@
     "next": "^8.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-drag-and-drop": "^3.0.0",
     "react-icons": "^3.4.0",
     "styled-components": "^4.1.3"
   },

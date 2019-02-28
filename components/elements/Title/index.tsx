@@ -2,11 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { defaultFontSize, largeFontSize } from "../styles";
 
+import DragAndDropBackground from "../DragAndDropBackground";
+
 export default () => {
   return (
     <Layout>
       <EmptySpace />
       <Title>
+        <DragAndDropBackground />
         <Head>native web apps</Head>
         <Sub>web apps that feel native </Sub>
       </Title>
@@ -24,6 +27,7 @@ const Layout = styled.div`
 
 const Title = styled.div`
   /* border: 1px solid green; */
+  position: relative;
   flex: 1;
   min-width: 400px;
 `;
