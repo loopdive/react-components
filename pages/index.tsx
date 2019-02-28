@@ -10,6 +10,7 @@ import Margins from "../components/layouts/Margins";
 export default () => (
   <Fragment>
     <GlobalStyle />
+
     <Fullscreen>
       <Margins>
         <TopBar />

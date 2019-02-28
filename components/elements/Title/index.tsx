@@ -10,8 +10,10 @@ export default () => {
       <EmptySpace />
       <Title>
         <DragAndDropBackground />
-        <Head>native web apps</Head>
-        <Sub>web apps that feel native </Sub>
+        <Span>
+          <Head>native web apps</Head>
+          <Sub>web apps that feel native </Sub>
+        </Span>
       </Title>
     </Layout>
   );
@@ -36,6 +38,10 @@ const EmptySpace = styled.div`
   display: flex;
   flex: 1 0;
   /* border: 1px solid blue; */
+`;
+
+const Span = styled.span`
+  position: relative;
 `;
 
 const Head = styled.h1`
