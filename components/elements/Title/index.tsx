@@ -2,18 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { defaultFontSize, largeFontSize } from "../styles";
 
-import DragAndDropBackground from "../DragAndDropBackground";
+import DragAndDropBackground from "../../../hoc/DragAndDropBackground";
 
 export default () => {
   return (
     <Layout>
       <EmptySpace />
       <Title>
-        <DragAndDropBackground />
-        <Span>
-          <Head>native web apps</Head>
-          <Sub>web apps that feel native </Sub>
-        </Span>
+        <Head>native web apps</Head>
+        <Sub>web apps that feel native </Sub>
       </Title>
     </Layout>
   );
@@ -27,12 +24,13 @@ const Layout = styled.div`
   align-items: center;
 `;
 
-const Title = styled.div`
+const Title = DragAndDropBackground(styled.div`
   /* border: 1px solid green; */
   position: relative;
   flex: 1;
   min-width: 400px;
-`;
+  ${(props: { background: any }) => props.background}
+`);
 
 const EmptySpace = styled.div`
   display: flex;
