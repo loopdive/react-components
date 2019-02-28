@@ -4,15 +4,21 @@ import { defaultFontSize, largeFontSize } from "../styles";
 
 import DragAndDropBackground from "../DragAndDropBackground";
 
-export default () => {
+export default ({
+  headline,
+  subtitle
+}: {
+  headline: string;
+  subtitle: string;
+}) => {
   return (
     <Layout>
       <EmptySpace />
       <Title>
         <DragAndDropBackground />
         <Span>
-          <Head>native web apps</Head>
-          <Sub>web apps that feel native </Sub>
+          <Head contentEditable>{headline}</Head>
+          <Sub>{subtitle}</Sub>
         </Span>
       </Title>
     </Layout>
@@ -47,6 +53,7 @@ const Span = styled.span`
 const Head = styled.h1`
   font-size: ${largeFontSize};
   margin-bottom: 2rem;
+  outline: none;
 `;
 
 const Sub = styled.p`

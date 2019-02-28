@@ -15,7 +15,7 @@ export default () => (
       <Margins>
         <TopBar />
         <ContentArea>
-          <Title />
+          <Title headline="native web apps" subtitle="..." />
         </ContentArea>
       </Margins>
     </Fullscreen>
