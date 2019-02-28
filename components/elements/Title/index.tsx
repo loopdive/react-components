@@ -38,10 +38,6 @@ const EmptySpace = styled.div`
   /* border: 1px solid blue; */
 `;
 
-const Span = styled.span`
-  position: relative;
-`;
-
 const Head = styled.h1`
   font-size: ${largeFontSize};
   margin-bottom: 2rem;
