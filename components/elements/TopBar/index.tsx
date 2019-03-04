@@ -1,19 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-
+import { css } from "styled-components";
 import Logo from "../Logo";
 import NavigationBar from "../NavigationBar";
 
 export default () => {
   return (
-    <TopBar>
+    <div css={TopBar}>
       <Logo />
       <NavigationBar items={items} />
-    </TopBar>
+    </div>
   );
 };
 
-const TopBar = styled.div`
+const TopBar = css`
   height: 10rem;
   display: flex;
   align-items: center;
