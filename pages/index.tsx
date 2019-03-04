@@ -1,19 +1,33 @@
 import { Fragment } from "react";
-
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import GlobalStyle from "../styles/base/_base";
-import TopBar from "../components/elements/TopBar";
-import Title from "../components/elements/Title";
-import ContentArea from "../components/elements/ContentArea";
-import Margins from "../components/layouts/Margins";
+import { Title, Logo, NavigationBar } from "../components/elements";
+import { TopBar, ContentArea, Margins } from "../components/layouts";
+
+const items = [
+  {
+    label: "about",
+    route: "/about"
+  },
+  {
+    label: "work",
+    route: "/work"
+  },
+  {
+    label: "contact",
+    route: "/contact"
+  }
+];
 
 export default () => (
   <Fragment>
     <GlobalStyle />
-
     <Fullscreen>
       <Margins>
-        <TopBar />
+        <TopBar style={TopBarStyle}>
+          <Logo />
+          <NavigationBar items={items} />
+        </TopBar>
         <ContentArea>
           <Title headline="native web apps" subtitle="..." />
         </ContentArea>
@@ -30,4 +44,11 @@ export const Fullscreen = styled.div`
   right: 0;
   overflow: hidden;
   border: 1px dashed rgba(255, 255, 0, 0.2);
+`;
+
+const TopBarStyle = css`
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

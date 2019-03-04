@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-
+// @ts-ignore
 import * as types from "styled-components/cssprop";
 
 export default class MyDocument extends Document {

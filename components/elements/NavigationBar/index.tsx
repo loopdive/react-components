@@ -1,8 +1,8 @@
 import Link from "next/link";
-import styled from "styled-components";
 import { MdSearch } from "react-icons/md";
-import { smallFontSize } from "../styles";
+import styled from "styled-components";
 import { respond } from "../../../styles/abstract/_functions";
+import { smallFontSize } from "../styles";
 
 interface Props {
   items: { label: string; route: string }[];

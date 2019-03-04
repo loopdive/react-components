@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { defaultFontSize, largeFontSize } from "../styles";
-
 import DragAndDropBackground from "../../../hoc/DragAndDropBackground";
+import { defaultFontSize, largeFontSize } from "../styles";
 
 export default ({
   headline,
@@ -57,6 +56,6 @@ const Sub = styled.p`
   letter-spacing: 2px;
   line-height: 1.5;
   color: gray;
-  margin-bottom: 15rem;
+  margin-bottom: 1rem;
   max-width: 60rem;
 `;
