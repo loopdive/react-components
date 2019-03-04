@@ -24,7 +24,7 @@ export default () => (
     <GlobalStyle />
     <Fullscreen>
       <Margins>
-        <TopBar style={TopBarStyle}>
+        <TopBar style={TopBarStyle} sticky>
           <Logo />
           <NavigationBar items={items} />
         </TopBar>
