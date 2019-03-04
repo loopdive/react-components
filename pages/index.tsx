@@ -22,17 +22,15 @@ const items = [
 export default () => (
   <Fragment>
     <GlobalStyle />
-    <Fullscreen>
-      <Margins>
-        <TopBar style={TopBarStyle} sticky>
-          <Logo />
-          <NavigationBar items={items} />
-        </TopBar>
-        <ContentArea>
-          <Title headline="native web apps" subtitle="..." />
-        </ContentArea>
-      </Margins>
-    </Fullscreen>
+    <TopBar style={TopBarStyle} sticky>
+      <Logo />
+      <NavigationBar items={items} />
+    </TopBar>
+    <Margins>
+      <ContentArea>
+        <Title headline="native web apps" subtitle="..." />
+      </ContentArea>
+    </Margins>
   </Fragment>
 );
 
