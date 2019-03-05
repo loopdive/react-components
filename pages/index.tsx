@@ -3,6 +3,8 @@ import styled, { css } from "styled-components";
 import GlobalStyle from "../styles/base/_base";
 import { Title, Logo, NavigationBar } from "../components/elements";
 import { TopBar, ContentArea, Margins } from "../components/layouts";
+import SearchBox from "../components/elements/SearchBox";
+import Dropdown from "../components/elements/Dropdown";
 
 const items = [
   {
@@ -24,7 +26,22 @@ export default () => (
     <GlobalStyle />
     <TopBar style={TopBarStyle} sticky>
       <Logo />
-      <NavigationBar items={items} />
+      <SearchBox
+        style={{
+          icon: css`
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 4rem;
+          `,
+          input: css`
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: white;
+          `
+        }}
+        onChange={(value: any) => console.log(value)}
+      />
+      <Dropdown style={{ button: css`` }} />
     </TopBar>
     <Margins>
       <ContentArea>
@@ -49,4 +66,5 @@ const TopBarStyle = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #0a0a0a;
 `;

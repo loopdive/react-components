@@ -1,52 +1,27 @@
-import React, { ReactNode, useState, useEffect } from "react";
+import React, { ReactNode } from "react";
 import { css } from "styled-components";
+import { useScrollDirection } from "../../imports";
 
 export default ({ style, children, sticky }: { style?: any; children?: ReactNode; sticky?: boolean }) => {
   const scrollUp = sticky ? useScrollDirection() : false;
 
-  return (
-    <div
-      css={css`
-        ${style}
-        width: 100%;
-        z-index: 10000;
-        ${scrollUp &&
-          css`
-            transform: translateY(-100%);
-          `}
-        transition: 0.3s;
-        ${sticky &&
-          css`
-            position: fixed;
-          `}
+  style = css`
+    ${style}
+    width: 100%;
+
+    ${scrollUp &&
+      css`
+        transform: translateY(-100%);
       `}
-    >
-      {children}
-    </div>
-  );
-};
+    transition: 0.3s;
 
-const useScrollDirection = () => {
-  const [scrollingUp, setScrollingUp] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
+    ${sticky &&
+      css`
+        position: fixed;
+      `}
 
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    if (scrollPosition > currentScrollPos) {
-      setScrollingUp(false);
-    } else {
-      setScrollingUp(true);
-    }
-    setScrollPosition(currentScrollPos);
-  };
+    z-index: 10000;
+  `;
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
-
-  return scrollingUp;
+  return <div css={style}>{children}</div>;
 };

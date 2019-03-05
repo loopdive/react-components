@@ -11,7 +11,7 @@ export default (WrappedComponent: any) => {
     background-position: center;
     background-size: cover;
     cursor: pointer;
-    
+   
   `;
 
     const imageHandler = (event: React.DragEvent<HTMLDivElement>) => {

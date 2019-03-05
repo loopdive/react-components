@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { MdSearch } from "react-icons/md";
-import styled from "styled-components";
+import SearchBox from "../SearchBox";
+import styled, { css } from "styled-components";
 import { respond } from "../../../styles/abstract/_functions";
 import { smallFontSize } from "../styles";
 
@@ -15,9 +15,6 @@ export default ({ items }: Props) => (
         <LinkElement>{label}</LinkElement>
       </Link>
     ))}
-    <Box>
-      <MdSearch color="lightgray" size={26} />
-    </Box>
   </NavigationBar>
 );
 
@@ -27,7 +24,6 @@ const NavigationBar = styled.nav`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-bottom: 1px solid #444;
 `;
 
 const LinkElement = styled.a`
@@ -68,12 +64,4 @@ const LinkElement = styled.a`
     transform: scale(1.05);
     transition: 0.2s;
   }
-`;
-
-const Box = styled.span`
-  padding-left: 8rem;
-  height: inherit;
-
-  display: flex;
-  align-items: center;
 `;

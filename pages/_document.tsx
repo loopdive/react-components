@@ -11,8 +11,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App: any) => (props: any) =>
-            sheet.collectStyles(<App {...props} />)
+          enhanceApp: (App: any) => (props: any) => sheet.collectStyles(<App {...props} />)
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -34,10 +33,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
         </Head>
         <body>
