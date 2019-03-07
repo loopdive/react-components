@@ -1,12 +1,13 @@
 import { Fragment, useState } from "react";
 import styled, { css, ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/base/_base";
-import { Title, Logo /* NavigationBar */ } from "../components/elements";
+import { Title, Logo /* NavigationBar */, TextInput } from "../components/elements";
 import { TopBar, ContentArea, Margins } from "../components/layouts";
 // import SearchBox from "../components/elements/SearchBox";
 import Dropdown from "../components/elements/Dropdown";
 import EmailInput from "../components/elements/input/EmailInput";
 import input from "../styles/themes/interfacers/input";
+import WordInput from "../components/elements/input/WordInput";
 
 /* const items = [
   {
@@ -31,7 +32,9 @@ export default () => {
         <GlobalStyle />
         <TopBar style={TopBarStyle} sticky>
           <Logo />
+
           <EmailInput />
+          <WordInput />
 
           {/* <SearchBox
           value={search}
