@@ -13,10 +13,10 @@ export const WordInput = (
 ) => {
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (isAlpha(event.target.value)) {
-      props.onChange && props.onChange(event);
+      props.onChange && props.onChange(event, true);
     }
   };
-  return <TextInput {...props} onChange={onChange} />;
+  return <TextInput {...props} onChange={onChange} name="word" />;
 };
 
 export default withHooks(withTheme(WordInput), "");

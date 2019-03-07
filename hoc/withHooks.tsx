@@ -5,13 +5,18 @@ function withHooks(WrappedComponent: any, defaultValue: any) {
     const [value, setValue] = useState(defaultValue);
     const [valid, setValid] = useState(false);
 
+    const setValidHandler = (valid: any) => {
+      props.getFormValidity(valid);
+      setValid(valid);
+    };
+
     return (
       <WrappedComponent
         {...props}
         {...{ value, valid }}
         onChange={({ target }: React.ChangeEvent<HTMLInputElement>, valid: boolean) => {
           setValue(target.value);
-          setValid(valid);
+          setValidHandler(valid);
         }}
       />
     );

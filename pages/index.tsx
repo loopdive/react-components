@@ -8,6 +8,7 @@ import Dropdown from "../components/elements/Dropdown";
 import EmailInput from "../components/elements/input/EmailInput";
 import input from "../styles/themes/interfacers/input";
 import WordInput from "../components/elements/input/WordInput";
+import Form from "../components/elements/input/Form";
 
 /* const items = [
   {
@@ -26,15 +27,20 @@ import WordInput from "../components/elements/input/WordInput";
  */
 
 export default () => {
+  const [formValidity, changeFormValidity] = useState(false);
+  const getFormValidity = (validity: boolean) => {
+    changeFormValidity(validity);
+  };
   return (
     <ThemeProvider theme={{ input }}>
       <Fragment>
         <GlobalStyle />
-        <TopBar style={TopBarStyle} sticky>
+        <TopBar style={TopBarStyle}>
           <Logo />
-
-          <EmailInput />
-          <WordInput />
+          <Form {...{ formValidity }}>
+            <EmailInput {...{ getFormValidity }} />
+            <WordInput {...{ getFormValidity }} />
+          </Form>
 
           {/* <SearchBox
           value={search}

@@ -15,7 +15,7 @@ export const EmailInput = (
     props.onChange && props.onChange(event, isEmail(event.target.value));
   };
 
-  return <input css={props.theme.input(props.valid)} {...props} type="email" onChange={onChange} />;
+  return <input css={props.theme.input(props.valid)} {...props} name="email" onChange={onChange} />;
 };
 
 export default withHooks(withTheme(EmailInput), "");
