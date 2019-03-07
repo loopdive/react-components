@@ -1,12 +1,14 @@
-import { Fragment } from "react";
-import styled, { css } from "styled-components";
+import { Fragment, useState } from "react";
+import styled, { css, ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/base/_base";
-import { Title, Logo, NavigationBar } from "../components/elements";
+import { Title, Logo /* NavigationBar */ } from "../components/elements";
 import { TopBar, ContentArea, Margins } from "../components/layouts";
-import SearchBox from "../components/elements/SearchBox";
+// import SearchBox from "../components/elements/SearchBox";
 import Dropdown from "../components/elements/Dropdown";
+import EmailInput from "../components/elements/input/EmailInput";
+import input from "../styles/themes/interfacers/input";
 
-const items = [
+/* const items = [
   {
     label: "about",
     route: "/about"
@@ -20,36 +22,44 @@ const items = [
     route: "/contact"
   }
 ];
+ */
 
-export default () => (
-  <Fragment>
-    <GlobalStyle />
-    <TopBar style={TopBarStyle} sticky>
-      <Logo />
-      <SearchBox
-        style={{
-          icon: css`
-            color: rgba(255, 255, 255, 0.2);
-            font-size: 4rem;
-          `,
-          input: css`
-            background-color: transparent;
-            border: none;
-            outline: none;
-            color: white;
-          `
-        }}
-        onChange={(value: any) => console.log(value)}
-      />
-      <Dropdown style={{ button: css`` }} />
-    </TopBar>
-    <Margins>
-      <ContentArea>
-        <Title headline="native web apps" subtitle="..." />
-      </ContentArea>
-    </Margins>
-  </Fragment>
-);
+export default () => {
+  return (
+    <ThemeProvider theme={{ input }}>
+      <Fragment>
+        <GlobalStyle />
+        <TopBar style={TopBarStyle} sticky>
+          <Logo />
+          <EmailInput />
+
+          {/* <SearchBox
+          value={search}
+          style={{
+            icon: css`
+              color: rgba(255, 255, 255, 0.2);
+              font-size: 4rem;
+            `,
+            input: css`
+              background-color: transparent;
+              border: none;
+              outline: none;
+              color: white;
+            `
+          }}
+          onChange={(value: any) => console.log(value)}
+        /> */}
+          <Dropdown style={{ button: css`` }} />
+        </TopBar>
+        <Margins>
+          <ContentArea>
+            <Title headline="native web apps" subtitle="..." />
+          </ContentArea>
+        </Margins>
+      </Fragment>
+    </ThemeProvider>
+  );
+};
 
 export const Fullscreen = styled.div`
   position: absolute;

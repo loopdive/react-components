@@ -6,7 +6,7 @@ import {
 
 const GlobalStyle = createGlobalStyle`
     ${fontFace}
-
+    
     *,
     *::before,
     *::after {
@@ -14,9 +14,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: inherit;
     }
-
     
-
     a {
         color: rgb(200, 50, 50);
         text-decoration: none;

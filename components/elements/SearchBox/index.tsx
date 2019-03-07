@@ -1,19 +1,20 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { ChangeEvent } from "react";
 import { css } from "styled-components";
 import { MdSearch } from "react-icons/md";
+import { TextInput } from "..";
 
 interface Props {
-  onChange: Function;
   style: {
     box?: any;
     icon?: any;
     input?: any;
   };
+  value: string;
+  placeholder?: string;
+  onChange?: ((event: ChangeEvent<HTMLInputElement>) => void) | undefined;
 }
 
-export default ({ style, onChange }: Props) => {
-  const [search, setSearch] = useState("");
-
+export default ({ style, value, placeholder, onChange }: Props) => {
   const box = css`
     min-height: 4rem;
     min-width: 30rem;
@@ -31,14 +32,7 @@ export default ({ style, onChange }: Props) => {
   return (
     <div css={box}>
       <MdSearch css={style.icon} />
-      <input
-        css={style.input}
-        value={search}
-        onChange={(event: ChangeEvent<HTMLInputElement>) => {
-          setSearch(event.target.value);
-          onChange(event.target.value);
-        }}
-      />
+      <TextInput {...{ css: style.input, value, onChange, placeholder }} />
     </div>
   );
 };
