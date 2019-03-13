@@ -1,5 +1,10 @@
 import { createGlobalStyle } from "styled-components";
-import { defaultFontSize, fontFace, fontFamily, colorWhite } from "../../../styles/abstract/_variables";
+import {
+  defaultFontSize,
+  fontFace,
+  fontFamily,
+  colorWhite
+} from "../../../packages/@interfacers/styles/abstract/_variables";
 
 const GlobalStyle = createGlobalStyle`
     ${fontFace}

@@ -1,5 +1,5 @@
 import React from "react";
-import withHooks from "../../../../hoc/withHooks";
+import withHooks from "../../../hoc/withHooks";
 import { withTheme } from "styled-components";
 
 export const TextInput = (

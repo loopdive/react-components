@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import styled, { css, ThemeProvider } from "styled-components";
+import { Title, Logo /* NavigationBar */ } from "../../packages/@interfacers/components/elements";
+import { TopBar, ContentArea } from "../../packages/@interfacers/components/layouts";
+import Dropdown from "../../packages/@interfacers/components/elements/Dropdown";
+import EmailInput from "../../packages/@interfacers/components/elements/input/EmailInput";
+import WordInput from "../../packages/@interfacers/components/elements/input/WordInput";
 import GlobalStyle from "./theme/global";
-import { Title, Logo /* NavigationBar */ } from "../../components/elements";
-import { TopBar, ContentArea } from "../../components/layouts";
-import Dropdown from "../../components/elements/Dropdown";
-import EmailInput from "../../components/elements/input/EmailInput";
 import theme, { TopBarStyle } from "./theme";
-import WordInput from "../../components/elements/input/WordInput";
 
 const items = [
   {

@@ -1,13 +1,12 @@
 import { Fragment } from "react";
 import styled, { css, ThemeProvider } from "styled-components";
-import { IoMdPerson } from "react-icons/io";
-import GlobalStyle from "./theme/global";
-import { Title, Logo /* NavigationBar */, SearchBox } from "../../components/elements";
-import { TopBar, ContentArea, Margins } from "../../components/layouts";
-import EmailInput from "../../components/elements/input/EmailInput";
-import interfacers from "./theme";
-import WordInput from "../../components/elements/input/WordInput";
+import { Logo, SearchBox } from "../../packages/@interfacers/components/elements";
+import { TopBar, ContentArea } from "../../packages/@interfacers/components/layouts";
+import EmailInput from "../../packages/@interfacers/components/elements/input/EmailInput";
+import WordInput from "../../packages/@interfacers/components/elements/input/WordInput";
 import { TopBarStyle } from "../Interfacers/theme";
+import GlobalStyle from "./theme/global";
+import interfacers from "./theme";
 
 const items = [
   {

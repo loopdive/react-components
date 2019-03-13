@@ -2,8 +2,7 @@ import React from "react";
 // @ts-ignore
 import isEmail from "validator/lib/isEmail";
 import { withTheme } from "styled-components";
-import withHooks from "../../../../hoc/withHooks";
-import { IoMdMail } from "react-icons/io";
+import withHooks from "../../../hoc/withHooks";
 
 export const EmailInput = (
   props: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {

@@ -1,16 +1,23 @@
 import React, { ChangeEvent } from "react";
 import { css } from "styled-components";
-import { MdSearch } from "react-icons/md";
+import { MdSearch as SearchIcon } from "react-icons/md";
 import { TextInput } from "..";
 
 import "./style.css";
 
+type DivProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+
+const Box = (props: DivProps) => <div {...props} />;
+
+type BoxStyle = any;
+type IconStyle = any;
+type InputStyle = any;
+
 interface Props {
   style: {
-    box?: any;
-    icon?: any;
-    input?: any;
-    searchBox?: any;
+    box?: BoxStyle;
+    icon?: IconStyle;
+    input?: InputStyle;
   };
   value: string;
   placeholder?: string;
@@ -33,9 +40,9 @@ export default ({ style, value, placeholder, onChange }: Props) => {
   `;
 
   return (
-    <div css={box} className="box">
-      <MdSearch css={style.icon} />
-      <TextInput {...{ css: style.searchBox, value, onChange, placeholder }} />
-    </div>
+    <Box css={box}>
+      <SearchIcon css={style.icon} />
+      <TextInput {...{ css: style.input, value, onChange, placeholder }} />
+    </Box>
   );
 };

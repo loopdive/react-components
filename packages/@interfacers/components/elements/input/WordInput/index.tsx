@@ -1,7 +1,7 @@
 import React from "react";
 import { TextInput } from "../TextInput";
 import isAlpha from "validator/lib/isAlpha";
-import withHooks from "../../../../hoc/withHooks";
+import withHooks from "../../../hoc/withHooks";
 import { withTheme } from "styled-components";
 
 export const WordInput = (
