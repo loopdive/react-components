@@ -1,14 +1,13 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import styled, { css, ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/base/_base";
-import { Title, Logo /* NavigationBar */, TextInput } from "../components/elements";
+import { Title, Logo /* NavigationBar */ } from "../components/elements";
 import { TopBar, ContentArea, Margins } from "../components/layouts";
 // import SearchBox from "../components/elements/SearchBox";
 import Dropdown from "../components/elements/Dropdown";
 import EmailInput from "../components/elements/input/EmailInput";
 import input from "../styles/themes/interfacers/input";
 import WordInput from "../components/elements/input/WordInput";
-import Form from "../components/elements/input/Form";
 
 /* const items = [
   {
@@ -27,20 +26,15 @@ import Form from "../components/elements/input/Form";
  */
 
 export default () => {
-  const [formValidity, changeFormValidity] = useState(false);
-  const getFormValidity = (validity: boolean) => {
-    changeFormValidity(validity);
-  };
   return (
     <ThemeProvider theme={{ input }}>
       <Fragment>
         <GlobalStyle />
         <TopBar style={TopBarStyle}>
           <Logo />
-          <Form {...{ formValidity }}>
-            <EmailInput {...{ getFormValidity }} />
-            <WordInput {...{ getFormValidity }} />
-          </Form>
+
+          <EmailInput />
+          <WordInput />
 
           {/* <SearchBox
           value={search}
