@@ -1,5 +1,6 @@
-export { default as Logo } from "./Logo";
-export { default as NavigationBar } from "./NavigationBar";
-export { default as Title } from "./Title";
+export { default as EmailInput } from "./input/EmailInput";
 export { default as TextInput } from "./input/TextInput";
+export { default as WordInput } from "./input/WordInput";
+export { default as NavigationBar } from "./NavigationBar";
 export { default as SearchBox } from "./SearchBox";
+export { default as Title } from "./Title";

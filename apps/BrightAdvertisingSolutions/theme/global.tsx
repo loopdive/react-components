@@ -24,7 +24,6 @@ const GlobalStyle = createGlobalStyle`
     body {
         box-sizing: border-box;
         background-color: rgb(230, 200, 15);
-        /* background-image: radial-gradient(rgb(200, 200, 15), rgb(150, 150, 15)); */
         background-repeat: no-repeat;
         background-attachment: fixed;
         font-family: ${fontFamily};

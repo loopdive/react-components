@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediumFontSize } from "../styles";
+import { mediumFontSize } from "../../../packages/@interfacers/styles";
 
 export default () => (
   <Logo>

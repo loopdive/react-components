@@ -1,10 +1,6 @@
 import { Fragment } from "react";
-import styled, { css, ThemeProvider } from "styled-components";
-import { Title, Logo /* NavigationBar */ } from "../../packages/@interfacers/components/elements";
-import { TopBar, ContentArea } from "../../packages/@interfacers/components/layouts";
-import Dropdown from "../../packages/@interfacers/components/elements/Dropdown";
-import EmailInput from "../../packages/@interfacers/components/elements/input/EmailInput";
-import WordInput from "../../packages/@interfacers/components/elements/input/WordInput";
+import styled, { ThemeProvider } from "styled-components";
+import { Title, TopBar, ContentArea, EmailInput, WordInput } from "../../packages/@interfacers/components";
 import GlobalStyle from "./theme/global";
 import theme, { TopBarStyle } from "./theme";
 
@@ -29,11 +25,8 @@ export default () => {
       <Fragment>
         <GlobalStyle />
         <TopBar style={TopBarStyle} sticky>
-          <Logo />
           <EmailInput />
           <WordInput />
-
-          <Dropdown style={{ button: css`` }} />
         </TopBar>
 
         <ContentArea>

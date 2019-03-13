@@ -1,9 +1,7 @@
 import { Fragment } from "react";
 import styled, { css, ThemeProvider } from "styled-components";
-import { Logo, SearchBox } from "../../packages/@interfacers/components/elements";
-import { TopBar, ContentArea } from "../../packages/@interfacers/components/layouts";
-import EmailInput from "../../packages/@interfacers/components/elements/input/EmailInput";
-import WordInput from "../../packages/@interfacers/components/elements/input/WordInput";
+import { SearchBox, EmailInput, WordInput, TopBar, ContentArea } from "../../packages/@interfacers/components";
+import Logo from "./Logo";
 import { TopBarStyle } from "../Interfacers/theme";
 import GlobalStyle from "./theme/global";
 import interfacers from "./theme";
