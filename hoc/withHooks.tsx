@@ -6,7 +6,6 @@ function withHooks(WrappedComponent: any, defaultValue: any) {
     const [valid, setValid] = useState(false);
 
     const setValidHandler = (valid: any) => {
-      props.getFormValidity(valid);
       setValid(valid);
     };
 
