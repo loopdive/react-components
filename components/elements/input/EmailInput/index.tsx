@@ -3,6 +3,7 @@ import React from "react";
 import isEmail from "validator/lib/isEmail";
 import { withTheme } from "styled-components";
 import withHooks from "../../../../hoc/withHooks";
+import { IoMdMail } from "react-icons/io";
 
 export const EmailInput = (
   props: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
@@ -15,7 +16,13 @@ export const EmailInput = (
     props.onChange && props.onChange(event, isEmail(event.target.value));
   };
 
-  return <input css={props.theme.input(props.valid)} {...props} type="email" onChange={onChange} />;
+  return (
+    <label css={props.theme.input.box(props.valid)}>
+      {/* <IoMdMail size={24} style={{ margin: 5 }} /> */}
+      e-mail
+      <input css={props.theme.input.field(props.valid)} {...props} type="email" onChange={onChange} />
+    </label>
+  );
 };
 
 export default withHooks(withTheme(EmailInput), "");

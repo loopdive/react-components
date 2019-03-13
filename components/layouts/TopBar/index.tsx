@@ -8,6 +8,10 @@ export default ({ style, children, sticky }: { style?: any; children?: ReactNode
   style = css`
     ${style}
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
 
     ${scrollUp &&
       css`

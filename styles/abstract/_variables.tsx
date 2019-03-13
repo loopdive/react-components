@@ -9,10 +9,10 @@ export const fontFace = css`
   }
 `;
 
-export const fontFamily = `"Alte Haas Grotesk", sans-serif;`;
+export const fontFamily = "sans-serif";
 export const smallFontSize = "1.6rem";
 export const defaultFontSize = "1.8rem";
-export const mediumFontSize = "3.5rem";
+export const mediumFontSize = "3rem";
 export const largeFontSize = "6rem";
 
 //  Colour variables

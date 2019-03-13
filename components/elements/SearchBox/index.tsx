@@ -8,6 +8,7 @@ interface Props {
     box?: any;
     icon?: any;
     input?: any;
+    searchBox?: any;
   };
   value: string;
   placeholder?: string;
@@ -32,7 +33,7 @@ export default ({ style, value, placeholder, onChange }: Props) => {
   return (
     <div css={box}>
       <MdSearch css={style.icon} />
-      <TextInput {...{ css: style.input, value, onChange, placeholder }} />
+      <TextInput {...{ css: style.searchBox, value, onChange, placeholder }} />
     </div>
   );
 };

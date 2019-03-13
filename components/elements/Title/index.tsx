@@ -3,13 +3,7 @@ import styled from "styled-components";
 import DragAndDropBackground from "../../../hoc/DragAndDropBackground";
 import { defaultFontSize, largeFontSize } from "../styles";
 
-export default ({
-  headline,
-  subtitle
-}: {
-  headline: string;
-  subtitle: string;
-}) => {
+export default ({ headline, subtitle }: { headline: string; subtitle: string }) => {
   return (
     <Layout>
       <EmptySpace />
@@ -45,6 +39,7 @@ const EmptySpace = styled.div`
 
 const Head = styled.h1`
   font-size: ${largeFontSize};
+  font-family: "Alte Haas Grotesk", sans-serif;
   margin-bottom: 2rem;
   outline: none;
 `;
