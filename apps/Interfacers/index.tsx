@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import styled, { css, ThemeProvider } from "styled-components";
 import { IoMdPerson } from "react-icons/io";
 import GlobalStyle from "./theme/global";
-import { Title, Logo /* NavigationBar */ } from "../../components/elements";
+import { Title, Logo /* NavigationBar */, SearchBox } from "../../components/elements";
 import { TopBar, ContentArea, Margins } from "../../components/layouts";
 import EmailInput from "../../components/elements/input/EmailInput";
 import interfacers from "./theme";
@@ -37,6 +37,14 @@ export default () => {
             <EmailInput />
             <WordInput label="Firstname" />
             <WordInput label="Lastname" />
+            <SearchBox
+              style={{
+                box: css`
+                  background: green;
+                `
+              }}
+              value=""
+            />
           </Form>
         </ContentArea>
       </Fragment>

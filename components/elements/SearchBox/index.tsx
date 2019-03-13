@@ -3,6 +3,8 @@ import { css } from "styled-components";
 import { MdSearch } from "react-icons/md";
 import { TextInput } from "..";
 
+import "./style.css";
+
 interface Props {
   style: {
     box?: any;
@@ -31,7 +33,7 @@ export default ({ style, value, placeholder, onChange }: Props) => {
   `;
 
   return (
-    <div css={box}>
+    <div css={box} className="box">
       <MdSearch css={style.icon} />
       <TextInput {...{ css: style.searchBox, value, onChange, placeholder }} />
     </div>
