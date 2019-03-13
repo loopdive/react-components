@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { Title, TopBar, ContentArea, EmailInput, WordInput } from "../../packages/@interfacers/components";
+import { Title, TopBar, ContentArea, EmailInput, WordInput } from "@interfacers/components";
 import GlobalStyle from "./theme/global";
 import theme, { TopBarStyle } from "./theme";
 

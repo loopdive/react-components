@@ -1,7 +1,6 @@
 import Link from "next/link";
-import SearchBox from "../SearchBox";
-import styled, { css } from "styled-components";
-import { respond } from "../../../styles/abstract/_functions";
+import styled from "styled-components";
+import { respond } from "../styles";
 import { smallFontSize } from "../styles";
 
 interface Props {

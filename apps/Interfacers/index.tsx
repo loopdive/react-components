@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import styled, { css, ThemeProvider } from "styled-components";
-import { SearchBox, EmailInput, WordInput, TopBar, ContentArea } from "../../packages/@interfacers/components";
+import { SearchBox, EmailInput, WordInput, TopBar, ContentArea } from "@interfacers/components";
 import Logo from "./Logo";
 import { TopBarStyle } from "../Interfacers/theme";
 import GlobalStyle from "./theme/global";
@@ -30,10 +30,9 @@ export default () => {
           <Logo />
         </TopBar>
         <ContentArea>
-          <Form>
-            <EmailInput />
-            <WordInput label="Firstname" />
-            <WordInput label="Lastname" />
+          {/* <EmailInput /> */}
+          <WordInput label="Firstname" />
+          {/* <WordInput label="Lastname" />
             <SearchBox
               style={{
                 box: css`
@@ -41,8 +40,7 @@ export default () => {
                 `
               }}
               value=""
-            />
-          </Form>
+            /> */}
         </ContentArea>
       </Fragment>
     </ThemeProvider>
