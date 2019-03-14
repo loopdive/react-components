@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-export const input = (valid: boolean) => css`
+export const input = css`
   outline: none;
   border-radius: 8px;
   font-size: 2rem;

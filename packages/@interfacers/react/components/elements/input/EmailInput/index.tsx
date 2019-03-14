@@ -2,7 +2,6 @@ import React from "react";
 // @ts-ignore
 import isEmail from "validator/lib/isEmail";
 import { withTheme } from "styled-components";
-import withHooks from "../../../hoc/withHooks";
 
 export const EmailInput = (
   props: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
@@ -16,12 +15,12 @@ export const EmailInput = (
   };
 
   return (
-    <label css={props.theme.input.box(props.valid)}>
+    <label css={props.theme.input.box}>
       {/* <IoMdMail size={24} style={{ margin: 5 }} /> */}
       e-mail
-      <input css={props.theme.input.field(props.valid)} {...props} type="email" onChange={onChange} />
+      <input css={props.theme.input.field} {...props} type="email" onChange={onChange} />
     </label>
   );
 };
 
-export default withHooks(withTheme(EmailInput), "");
+export default withTheme(EmailInput);

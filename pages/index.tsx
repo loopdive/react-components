@@ -1,4 +1,4 @@
-import { Interfacers, BrightAdvertisingSolutions } from "../apps";
+import { Interfacers } from "../apps";
 
 export default () => {
   return <Interfacers />;

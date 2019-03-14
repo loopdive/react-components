@@ -1,12 +1,11 @@
-import { Fragment } from "react";
-import styled, { css, ThemeProvider } from "styled-components";
-import { SearchBox, EmailInput, WordInput, TopBar, ContentArea } from "@interfacers/components";
+import { Fragment, useState, ChangeEvent } from "react";
+import styled from "styled-components";
+import { WordInput, TopBar, ContentArea } from "./components";
 import Logo from "./Logo";
 import { TopBarStyle } from "../Interfacers/theme";
 import GlobalStyle from "./theme/global";
-import interfacers from "./theme";
 
-const items = [
+export const items = [
   {
     label: "about",
     route: "/about"
@@ -22,31 +21,32 @@ const items = [
 ];
 
 export default () => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastName] = useState("");
+
   return (
-    <ThemeProvider theme={interfacers}>
-      <Fragment>
-        <GlobalStyle />
-        <TopBar style={TopBarStyle}>
-          <Logo />
-        </TopBar>
-        <ContentArea>
-          {/* <EmailInput /> */}
-          <WordInput label="Firstname" />
-          {/* <WordInput label="Lastname" />
-            <SearchBox
-              style={{
-                box: css`
-                  background: green;
-                `
-              }}
-              value=""
-            /> */}
-        </ContentArea>
-      </Fragment>
-    </ThemeProvider>
+    <Fragment>
+      <GlobalStyle />
+      <TopBar style={TopBarStyle}>
+        <Logo />
+      </TopBar>
+      <ContentArea>
+        <Form>
+          <WordInput
+            label="Firstname"
+            value={firstname}
+            onChange={({ target }: ChangeEvent<HTMLInputElement>) => setFirstname(target.value)}
+          />
+          <WordInput
+            label="Lastname"
+            value={lastname}
+            onChange={({ target }: ChangeEvent<HTMLInputElement>) => setLastName(target.value)}
+          />
+        </Form>
+      </ContentArea>
+    </Fragment>
   );
 };
-
 export const Fullscreen = styled.div`
   position: absolute;
   top: 0;
