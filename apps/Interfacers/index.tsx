@@ -5,6 +5,9 @@ import Logo from "./Logo";
 import { topbar } from "../Interfacers/theme";
 import GlobalStyle from "./theme/global";
 import { app } from "./theme";
+import { DropDown } from "@interfacers/react/components";
+
+import { css } from "styled-components";
 
 // import { withDefaultProps } from "@interfacers/react/components/imports";
 // export default withDefaultProps(WordInput, input2);
@@ -52,6 +55,7 @@ export default () => {
       <GlobalStyle />
       <TopBar style={topbar}>
         <Logo />
+
         <select onChange={(event: any) => setTheme(event.target.value)}>
           <option>interfacers</option>
           <option>brightAdvertisingSolutions</option>
@@ -59,8 +63,22 @@ export default () => {
       </TopBar>
       <ContentArea>
         <Form>
-          <WordInput theme={theme} label="Firstname" setValue={setFirstname} value={firstname} />
-          <WordInput theme={theme} label="Lastname" setValue={setLastname} value={lastname} />
+          <DropDown
+            styles={css`
+              background: rgba(0, 0, 0, 0.8);
+            `}
+            listItems={["hello", "welcome", "dude"]}
+          >
+            <WordInput theme={theme} label="Firstname" setValue={setFirstname} value={firstname} />
+          </DropDown>
+          <DropDown
+            styles={css`
+              background: rgba(0, 0, 0, 0.8);
+            `}
+            listItems={["hello", "welcome", "dude"]}
+          >
+            <WordInput theme={theme} label="Lastname" setValue={setLastname} value={lastname} />
+          </DropDown>
         </Form>
       </ContentArea>
     </Fragment>
