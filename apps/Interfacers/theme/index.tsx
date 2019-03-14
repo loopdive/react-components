@@ -4,7 +4,10 @@ import { input, input2 } from "./input";
 export * from "./input";
 
 export const app = {
-  interfacers: { input },
+  interfacers: {
+    global: {},
+    input
+  },
   brightAdvertisingSolutions: { input: input2 }
 };
 

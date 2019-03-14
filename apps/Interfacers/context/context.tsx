@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
+import { css } from "styled-components";
 
-export const StoreContext = createContext();
+export const StoreContext = createContext(undefined);
 
 const themes = {
   textInput: {
@@ -40,10 +41,10 @@ const themes = {
   }
 };
 
-const Store = ({ children }) => {
+const Store = ({ children: any }) => {
   const [state, changeState] = useState(themes);
 
-  return <StoreContext.Provider value={[state, dispatch]}>{children}</StoreContext.Provider>;
+  return <StoreContext.Provider value={state}>{children}</StoreContext.Provider>;
 };
 
 export default Store;

@@ -27,8 +27,13 @@ export const items = [
 const WordInput = ({ theme, label, setValue, value }: { theme: any; label: any; setValue: any; value: any }) => {
   return (
     <GenericWordInput
-      label={{ ...app[theme].input.label, text: label }}
+      label={{
+        // @ts-ignore
+        ...app[theme].input.label,
+        text: label
+      }}
       input={{
+        // @ts-ignore
         ...app[theme].input.input,
         value: value,
         onChange: ({ target }: ChangeEvent<HTMLInputElement>) => setValue(target.value)
