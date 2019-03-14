@@ -1,5 +1,12 @@
 import { css } from "styled-components";
-import { input, searchBox, button } from "./input";
+import { input, input2 } from "./input";
+
+export * from "./input";
+
+export const app = {
+  interfacers: { input },
+  brightAdvertisingSolutions: { input: input2 }
+};
 
 export const topbar = {
   css: css`
@@ -9,5 +16,3 @@ export const topbar = {
     justify-content: center;
   `
 };
-
-export { input, searchBox, button };

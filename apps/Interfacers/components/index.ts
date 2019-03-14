@@ -1,2 +1,2 @@
-export { SearchBox, EmailInput, TopBar, ContentArea } from "@interfacers/react/components";
-export { default as WordInput } from "./WordInput";
+export { SearchBox, EmailInput, TopBar, ContentArea, WordInput } from "@interfacers/react/components";
+// export { default as WordInput } from "./WordInput";

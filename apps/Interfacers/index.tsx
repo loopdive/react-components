@@ -1,9 +1,13 @@
 import { Fragment, useState, ChangeEvent } from "react";
 import styled from "styled-components";
-import { WordInput, TopBar, ContentArea } from "./components";
+import { WordInput as GenericWordInput, TopBar, ContentArea } from "./components";
 import Logo from "./Logo";
-import { TopBarStyle } from "../Interfacers/theme";
+import { topbar } from "../Interfacers/theme";
 import GlobalStyle from "./theme/global";
+import { app } from "./theme";
+
+// import { withDefaultProps } from "@interfacers/react/components/imports";
+// export default withDefaultProps(WordInput, input2);
 
 export const items = [
   {
@@ -20,28 +24,38 @@ export const items = [
   }
 ];
 
+const WordInput = ({ theme, label, setValue, value }: { theme: any; label: any; setValue: any; value: any }) => {
+  return (
+    <GenericWordInput
+      label={{ ...app[theme].input.label, text: label }}
+      input={{
+        ...app[theme].input.input,
+        value: value,
+        onChange: ({ target }: ChangeEvent<HTMLInputElement>) => setValue(target.value)
+      }}
+    />
+  );
+};
+
 export default () => {
   const [firstname, setFirstname] = useState("");
-  const [lastname, setLastName] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [theme, setTheme] = useState("interfacers");
 
   return (
     <Fragment>
       <GlobalStyle />
-      <TopBar style={TopBarStyle}>
+      <TopBar style={topbar}>
         <Logo />
+        <select onChange={(event: any) => setTheme(event.target.value)}>
+          <option>interfacers</option>
+          <option>brightAdvertisingSolutions</option>
+        </select>
       </TopBar>
       <ContentArea>
         <Form>
-          <WordInput
-            label="Firstname"
-            value={firstname}
-            onChange={({ target }: ChangeEvent<HTMLInputElement>) => setFirstname(target.value)}
-          />
-          <WordInput
-            label="Lastname"
-            value={lastname}
-            onChange={({ target }: ChangeEvent<HTMLInputElement>) => setLastName(target.value)}
-          />
+          <WordInput theme={theme} label="Firstname" setValue={setFirstname} value={firstname} />
+          <WordInput theme={theme} label="Lastname" setValue={setLastname} value={lastname} />
         </Form>
       </ContentArea>
     </Fragment>

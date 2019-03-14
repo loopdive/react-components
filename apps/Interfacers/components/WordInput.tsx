@@ -1,4 +1,5 @@
 import { WordInput } from "@interfacers/react/components";
-import { input } from "../theme";
+import { input2 } from "../theme";
+import { withDefaultProps } from "@interfacers/react/components/imports";
 
-export default (props: any) => <WordInput {...props} theme={input} />;
+export default withDefaultProps(WordInput, input2);

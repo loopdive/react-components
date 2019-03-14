@@ -6,12 +6,12 @@ export const WordInput = (props: Props) => (
   <TextInput
     {...props}
     input={{
-      ...props.input,
       onChange: (event: ChangeEvent<HTMLInputElement>) => {
         if (isAlpha(event.target.value, "de-DE") || event.target.value === "") {
           props.input && props.input.onChange && props.input.onChange(event);
         }
-      }
+      },
+      ...props.input
     }}
   />
 );

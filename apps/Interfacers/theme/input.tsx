@@ -1,6 +1,8 @@
 import { css } from "styled-components";
+import "./style.css";
+import { Props } from "@interfacers/react/components/elements/input/TextInput";
 
-export const input = {
+export const input: Props = {
   label: {
     css: css`
       color: rgba(255, 255, 255, 0.6);
@@ -34,6 +36,51 @@ export const input = {
       background: none;
     `
   }
+};
+
+export const input2: Props = {
+  label: {
+    css: css`
+      color: rgba(255, 255, 255, 0.6);
+      outline: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 2rem;
+      padding: 0.75rem 1rem;
+      margin: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    `
+  },
+  input: {
+    css: css`
+      outline: none;
+      color: rgba(255, 255, 255, 1);
+      font-size: 2rem;
+      padding: 0.5rem;
+      margin: 0rem 0.25rem;
+      border: none;
+      background: none;
+    `
+  }
+};
+
+export const color = {
+  primary: "red",
+  secondary: "black",
+  light: "white"
+};
+
+export const app = {
+  input: input,
+  searchBox: input
 };
 
 export const button = css`
