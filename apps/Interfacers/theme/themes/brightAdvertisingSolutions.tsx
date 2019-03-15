@@ -1,7 +1,15 @@
-import { createGlobalStyle } from "styled-components";
-import { defaultFontSize, fontFace, fontFamily, colorWhite } from "@interfacers/react/components/styles";
+import { css, createGlobalStyle } from "styled-components";
+import { defaultFontSize, fontFace, fontFamily } from "@interfacers/react/components/styles";
+import { input2 } from "../input";
 
-const GlobalStyle = createGlobalStyle`
+export default {
+  color: {
+    primary: css`
+      color: black;
+    `
+  },
+  global: {
+    css: createGlobalStyle`
     ${fontFace}
     
     *,
@@ -28,8 +36,17 @@ const GlobalStyle = createGlobalStyle`
         background-attachment: fixed;
         font-family: ${fontFamily};
         font-size: ${defaultFontSize}; 
-        color: ${colorWhite}
+        color: white;
     }
-`;
-
-export default GlobalStyle;
+`
+  },
+  textInput: input2,
+  topbar: {
+    css: css`
+      height: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    `
+  }
+};

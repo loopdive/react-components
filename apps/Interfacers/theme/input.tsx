@@ -41,33 +41,28 @@ export const input: Props = {
 export const input2: Props = {
   label: {
     css: css`
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.75);
       outline: none;
-      border: 1px solid rgba(255, 255, 255, 0.15);
       font-size: 2rem;
       padding: 0.75rem 1rem;
       margin: 0.5rem;
-      background-color: rgba(255, 255, 255, 0.1);
       display: flex;
       flex-direction: row;
       align-items: center;
-
-      &:hover {
-        color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background-color: rgba(255, 255, 255, 0.15);
-      }
     `
   },
   input: {
     css: css`
       outline: none;
-      color: rgba(255, 255, 255, 1);
+      border-radius: 8px;
       font-size: 2rem;
-      padding: 0.5rem;
-      margin: 0rem 0.25rem;
-      border: none;
+      padding: 1rem;
+      margin: 1rem;
+      /* transition: 0.15s; */
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      color: white;
       background: none;
+      box-shadow: inset 0.1rem 0.15rem 1rem rgba(0, 0, 0, 0.12);
     `
   }
 };

@@ -1789,6 +1789,13 @@
     "@types/prop-types" "*"
     "@types/react" "*"
 
+"@types/react-onclickoutside@^6.7.1":
+  version "6.7.1"
+  resolved "https://registry.yarnpkg.com/@types/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#31c72d4cb1feac08889b725b0324c3b1821107ff"
+  integrity sha512-EOdHrkUr1EoQBHq9HdRBv3IW4EOUP2gwE3bU667wuX6JnfD9fFHCArR9p/AekW+ENem2auc+PYSM6HDSV4XkVQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.8.4":
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.4.tgz#134307f5266e866d5e7c25e47f31f9abd5b2ea34"
@@ -9585,6 +9592,11 @@ react-modal@^3.6.1:
     prop-types "^15.5.10"
     react-lifecycles-compat "^3.0.0"
     warning "^3.0.0"
+
+react-onclickoutside@^6.8.0:
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.8.0.tgz#9f91b5b3ed59f4d9e43fd71620dc200773a4d569"
+  integrity sha512-5Q4Rn7QLEoh7WIe66KFvYIpWJ49GeHoygP1/EtJyZjXKgrWH19Tf0Ty3lWyQzrEEDyLOwUvvmBFSE3dcDdvagA==
 
 react-popper-tooltip@^2.8.0:
   version "2.8.1"

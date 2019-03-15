@@ -1,9 +1,6 @@
 import { Fragment, useState, ChangeEvent } from "react";
-import styled from "styled-components";
 import { WordInput as GenericWordInput, TopBar, ContentArea } from "./components";
 import Logo from "./Logo";
-import { topbar } from "../Interfacers/theme";
-import GlobalStyle from "./theme/global";
 import { app } from "./theme";
 
 // import { withDefaultProps } from "@interfacers/react/components/imports";
@@ -29,12 +26,12 @@ const WordInput = ({ theme, label, setValue, value }: { theme: any; label: any; 
     <GenericWordInput
       label={{
         // @ts-ignore
-        ...app[theme].input.label,
+        ...app[theme].textInput.label,
         text: label
       }}
       input={{
         // @ts-ignore
-        ...app[theme].input.input,
+        ...app[theme].textInput.input,
         value: value,
         onChange: ({ target }: ChangeEvent<HTMLInputElement>) => setValue(target.value)
       }}
@@ -47,10 +44,14 @@ export default () => {
   const [lastname, setLastname] = useState("");
   const [theme, setTheme] = useState("interfacers");
 
+  // @ts-ignore
+  const { topbar, global } = app[theme];
+  const GlobalStyle = global.css;
+
   return (
     <Fragment>
       <GlobalStyle />
-      <TopBar style={topbar}>
+      <TopBar {...topbar}>
         <Logo />
         <select onChange={(event: any) => setTheme(event.target.value)}>
           <option>interfacers</option>
@@ -58,24 +59,9 @@ export default () => {
         </select>
       </TopBar>
       <ContentArea>
-        <Form>
-          <WordInput theme={theme} label="Firstname" setValue={setFirstname} value={firstname} />
-          <WordInput theme={theme} label="Lastname" setValue={setLastname} value={lastname} />
-        </Form>
+        <WordInput theme={theme} label="Firstname" setValue={setFirstname} value={firstname} />
+        <WordInput theme={theme} label="Lastname" setValue={setLastname} value={lastname} />
       </ContentArea>
     </Fragment>
   );
 };
-export const Fullscreen = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  border: 1px dashed rgba(255, 255, 0, 0.2);
-`;
-
-const Form = styled.div`
-  max-width: 500px;
-`;
