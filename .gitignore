@@ -26,4 +26,4 @@ dist
 /.next
 .stylelintcache
 .eslintcache
-package-json.lock
+package-lock.json
