@@ -2,9 +2,6 @@ import { Fragment, useState, ChangeEvent } from "react";
 import { WordInput as GenericWordInput, TopBar, ContentArea } from "./components";
 import Logo from "./Logo";
 import { app } from "./theme";
-import { DropDown } from "@interfacers/react/components";
-
-import { css } from "styled-components";
 
 // import { withDefaultProps } from "@interfacers/react/components/imports";
 // export default withDefaultProps(WordInput, input2);
