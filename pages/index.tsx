@@ -20,7 +20,7 @@ export default () => {
           /*           &:hover {
             transform: translate3d(0, 0px, -1000px) rotate3d(1, 0, 0, 0deg);
           }
- */
+          */
         `}
       >
         <div

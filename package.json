@@ -1,8 +1,27 @@
 {
   "name": "interfacers-web",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "unlicensed",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/@interfacers/react-components",
+      "packages/@interfacers/react-themes"
+    ]
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint:js": "eslint . --cache",
+    "lint:css": "stylelint \"sass/**/*.scss\" --cache",
+    "lint": "concurrently \"yarn lint:js\" \"yarn lint:css\"",
+    "precommit": "lint-staged",
+    "prepush": "yarn lint",
+    "storybook": "start-storybook -p 9009 -s public",
+    "storybook:build": "build-storybook -s public"
+  },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
@@ -22,18 +41,6 @@
     "react-with-gesture": "^4.0.6",
     "styled-components": "^4.1.3",
     "validator": "^10.11.0"
-  },
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "lint:js": "eslint . --cache",
-    "lint:css": "stylelint \"sass/**/*.scss\" --cache",
-    "lint": "concurrently \"yarn lint:js\" \"yarn lint:css\"",
-    "precommit": "lint-staged",
-    "prepush": "yarn lint",
-    "storybook": "start-storybook -p 9009 -s public",
-    "storybook:build": "build-storybook -s public"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.0.0",
