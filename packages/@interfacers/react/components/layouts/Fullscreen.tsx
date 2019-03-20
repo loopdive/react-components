@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { css } from "styled-components";
 
-const Fullscreen = styled.div`
+const Fullscreen = css`
   position: absolute;
   top: 0;
   bottom: 0;

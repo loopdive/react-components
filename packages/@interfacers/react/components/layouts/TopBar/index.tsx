@@ -1,12 +1,12 @@
 import React, { ReactNode } from "react";
-import { css as cssprop } from "styled-components";
+import { css } from "styled-components";
 import { useScrollDirection } from "../../imports";
 
-export default ({ css, children, sticky }: { css?: any; children?: ReactNode; sticky?: boolean }) => {
+export default ({ css: cssStyle, children, sticky }: { css?: any; children?: ReactNode; sticky?: boolean }) => {
   const scrollUp = sticky ? useScrollDirection() : false;
 
-  css = cssprop`
-    ${css}
+  cssStyle = css`
+    ${cssStyle}
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -27,5 +27,5 @@ export default ({ css, children, sticky }: { css?: any; children?: ReactNode; st
     z-index: 10000;
   `;
 
-  return <div css={css}>{children}</div>;
+  return <div css={cssStyle}>{children}</div>;
 };

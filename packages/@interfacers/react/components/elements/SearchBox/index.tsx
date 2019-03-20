@@ -1,48 +1,20 @@
-import React, { ChangeEvent } from "react";
-import { css } from "styled-components";
+import React from "react";
 import { MdSearch as SearchIcon } from "react-icons/md";
-import { TextInput } from "..";
-
-import "./style.css";
+import { TextInput, Props as TextInputProps } from "../input/TextInput";
 
 type DivProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
-const Box = (props: DivProps) => <div {...props} />;
-
-type BoxStyle = any;
-type IconStyle = any;
-type InputStyle = any;
-
 interface Props {
-  style: {
-    box?: BoxStyle;
-    icon?: IconStyle;
-    input?: InputStyle;
-  };
-  value: string;
-  placeholder?: string;
-  onChange?: ((event: ChangeEvent<HTMLInputElement>) => void) | undefined;
+  box?: DivProps;
+  icon?: any;
+  textInput?: TextInputProps;
 }
 
-export default ({ style, value, placeholder, onChange }: Props) => {
-  const box = css`
-    min-height: 4rem;
-    min-width: 30rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    display: flex;
-    flex-flow: row-reverse;
-    align-items: center;
-    border-radius: 1rem;
-    margin: 1rem;
-    padding: 0.75rem;
-
-    font-size: 80;
-  `;
-
+export default ({ box, icon, textInput }: Props) => {
   return (
-    <Box css={box}>
-      <SearchIcon css={style.icon} />
-      <TextInput {...{ css: style.input, value, onChange, placeholder }} />
-    </Box>
+    <div {...box} css={box && box.css}>
+      <SearchIcon {...icon} css={icon && icon.css} />
+      <TextInput {...textInput} />
+    </div>
   );
 };

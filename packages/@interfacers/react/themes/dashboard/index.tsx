@@ -41,7 +41,7 @@ export const dropdown = {
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
     }
-    `,
+  `,
   item: css`
     color: rgb(200, 200, 200);
     padding: 11px 24px;
@@ -57,7 +57,7 @@ export const dropdown = {
       background-color: rgba(0, 0, 0, 0.3);
       color: white;
     }
-    `
+  `
 };
 
 /* export const Button = ({ label, onClick, enabled }: { label: string; onClick: () => void; enabled?: boolean }) => (

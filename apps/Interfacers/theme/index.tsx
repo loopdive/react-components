@@ -1,9 +1,8 @@
-import interfacers from "./themes/interfacers";
-import brightAdvertisingSolutions from "./themes/brightAdvertisingSolutions";
+import * as interfacers from "./themes/interfacers";
+import * as brightAdvertisingSolutions from "./themes/brightAdvertisingSolutions";
+import { Theme } from "./type";
 
-export * from "./input";
-
-export const app = {
+export const app: { [theme: string]: Theme } = {
   interfacers,
   brightAdvertisingSolutions
 };

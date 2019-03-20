@@ -8,5 +8,5 @@ export function withDefaultProps(
   WrappedComponent: string | FunctionComponent<any> | ComponentClass<any, any>,
   defaultProps: {}
 ) {
-  return (props: any) => <WrappedComponent {...merge(defaultProps, props)} />;
+  return (props: any) => <WrappedComponent {...merge({}, defaultProps, props)} />;
 }
