@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { StyleProps } from "@interfacers/react/components/styles";
+import { StyleProps } from "@interfacers/react-components/components/styles";
 
 export type InputProps = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 

@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { mediumFontSize } from "@interfacers/react/components/styles";
+import { mediumFontSize } from "@interfacers/react-components/components/styles";
 
 export default (props: any) => (
   <div

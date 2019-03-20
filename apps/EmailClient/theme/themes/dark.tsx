@@ -1,7 +1,12 @@
 import { css, createGlobalStyle } from "styled-components";
-import { defaultFontSize, fontFace, fontFamily, colorWhite } from "@interfacers/react/components/styles";
-import { Props } from "@interfacers/react/components/elements/input/TextInput";
-import Fullscreen from "@interfacers/react/components/layouts/Fullscreen";
+import {
+  defaultFontSize,
+  fontFace,
+  fontFamily,
+  colorWhite
+} from "@interfacers/react-components/components/styles";
+import { Props } from "@interfacers/react-components/components/elements/input/TextInput";
+import Fullscreen from "@interfacers/react-components/components/layouts/Fullscreen";
 
 export const color = {
   primary: css`

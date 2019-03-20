@@ -1,6 +1,6 @@
 import { EmailClient } from "../apps";
 import { css } from "styled-components";
-import Fullscreen from "@interfacers/react/components/layouts/Fullscreen";
+import Fullscreen from "@interfacers/react-components/components/layouts/Fullscreen";
 
 export default () => {
   return (

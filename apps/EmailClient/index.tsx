@@ -4,8 +4,9 @@ import { FaUser } from "react-icons/fa";
 import { TopBar, SearchBox, EmailList } from "./components";
 import Logo from "./Logo";
 import * as theme from "./theme/themes/dark";
-import Fullscreen from "@interfacers/react/components/layouts/Fullscreen";
-import { Email, EmailType } from "./components/Email";
+import Fullscreen from "@interfacers/react-components/components/layouts/Fullscreen";
+import { Email } from "./components/Email";
+import { EmailType } from "./components/EmailList";
 
 export const items = [
   {
@@ -22,96 +23,126 @@ export const items = [
   }
 ];
 
-const emails = [
+const emails: EmailType[] = [
   {
+    id: "1",
     sender: "Clark Kent",
     subject: "Next Thursday",
     message: "Hi, are you superman?"
   },
   {
+    id: "2",
     sender: "Mary Jane",
     subject: "Dinner?",
     message: "Hey Tiger! Are you coming for dinner?"
   },
   {
+    id: "3",
     sender: "Peter Parker",
     subject: "RE: Dinner?",
     message: "Dear Mary, I will be late again, sorry!"
   },
   {
+    id: "4",
     sender: "Clark Kent",
     subject: "Next Thursday",
     message: "Hi, are you superman?"
   },
   {
+    id: "5",
     sender: "Mary Jane",
     subject: "Dinner?",
     message: "Hey Tiger! Are you coming for dinner?"
   },
   {
+    id: "6",
     sender: "Peter Parker",
     subject: "RE: Dinner?",
     message: "Dear Mary, I will be late again, sorry!"
   },
   {
+    id: "7",
     sender: "Clark Kent",
     subject: "Next Thursday",
     message: "Hi, are you superman?"
   },
   {
+    id: "8",
     sender: "Mary Jane",
     subject: "Dinner?",
     message: "Hey Tiger! Are you coming for dinner?"
   },
   {
+    id: "9",
     sender: "Peter Parker",
     subject: "RE: Dinner?",
     message: "Dear Mary, I will be late again, sorry!"
   },
   {
+    id: "10",
     sender: "Clark Kent",
     subject: "Next Thursday",
     message: "Hi, are you superman?"
   },
   {
-    sender: "Mary Jane",
-    subject: "Dinner?",
-    message: "Hey Tiger! Are you coming for dinner?"
-  },
-  {
-    sender: "Peter Parker",
-    subject: "RE: Dinner?",
-    message: "Dear Mary, I will be late again, sorry!"
-  },
-  {
+    id: "11",
     sender: "Clark Kent",
     subject: "Next Thursday",
     message: "Hi, are you superman?"
   },
   {
+    id: "12",
     sender: "Mary Jane",
     subject: "Dinner?",
     message: "Hey Tiger! Are you coming for dinner?"
   },
   {
+    id: "13",
     sender: "Peter Parker",
     subject: "RE: Dinner?",
     message: "Dear Mary, I will be late again, sorry!"
   },
   {
+    id: "14",
     sender: "Clark Kent",
     subject: "Next Thursday",
     message: "Hi, are you superman?"
   },
   {
+    id: "15",
     sender: "Mary Jane",
     subject: "Dinner?",
     message: "Hey Tiger! Are you coming for dinner?"
   },
   {
+    id: "16",
     sender: "Peter Parker",
     subject: "RE: Dinner?",
     message: "Dear Mary, I will be late again, sorry!"
+  },
+  {
+    id: "17",
+    sender: "Clark Kent",
+    subject: "Next Thursday",
+    message: "Hi, are you superman?"
+  },
+  {
+    id: "18",
+    sender: "Mary Jane",
+    subject: "Dinner?",
+    message: "Hey Tiger! Are you coming for dinner?"
+  },
+  {
+    id: "19",
+    sender: "Peter Parker",
+    subject: "RE: Dinner?",
+    message: "Dear Mary, I will be late again, sorry!"
+  },
+  {
+    id: "20",
+    sender: "Clark Kent",
+    subject: "Next Thursday",
+    message: "Hi, are you superman?"
   }
 ];
 
@@ -187,7 +218,10 @@ export default () => {
           `}
         >
           <Sidebar>
-            <EmailList emails={emails} onSelect={(index: number) => setSelection(index)} />
+            <EmailList
+              emails={emails}
+              onSelect={(index: number) => setSelection(index)}
+            />
           </Sidebar>
           <ContentArea>
             <Email {...emails[selection]} />

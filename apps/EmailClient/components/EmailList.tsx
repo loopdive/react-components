@@ -53,12 +53,19 @@ const MailRow = ({
 );
 
 export interface EmailType {
+  id: string;
   subject: string;
   sender: string;
   message: string;
 }
 
-export const EmailList = ({ emails, onSelect }: { emails: EmailType[]; onSelect: (index: number) => void }) => (
+export const EmailList = ({
+  emails,
+  onSelect
+}: {
+  emails: EmailType[];
+  onSelect: (index: number) => void;
+}) => (
   <div
     css={css`
       border-right: 2px solid rgba(200, 200, 200, 0.1);
@@ -68,7 +75,7 @@ export const EmailList = ({ emails, onSelect }: { emails: EmailType[]; onSelect:
     `}
   >
     {emails.map((email, index) => (
-      <MailRow {...email} onClick={() => onSelect(index)} />
+      <MailRow key={email.id} {...email} onClick={() => onSelect(index)} />
     ))}
   </div>
 );
