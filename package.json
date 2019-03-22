@@ -1,7 +1,7 @@
 {
   "name": "@interfacers/react-components",
   "description": "reusable react components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:interfacers/react-components.git",
