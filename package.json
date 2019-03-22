@@ -3,12 +3,25 @@
   "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:interfacers/react-components.git",
+  "homepage": "https://github.com/interfacers/react-components",
   "author": "Thomas Tränkler <git@thomas.traenkler.com>",
   "contributors": [
     "Thomas Tränkler",
     "Djavan Arrigone"
   ],
   "license": "MIT",
+  "keywords": [
+    "react",
+    "component",
+    "library",
+    "ui",
+    "user interface",
+    "components",
+    "reusable",
+    "design system",
+    "hook",
+    "hooks"
+  ],
   "peerDependencies": {
     "babel-polyfill": "^6.26.0",
     "lodash-es": "^4.17.11",
