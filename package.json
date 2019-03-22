@@ -14,7 +14,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "release": "yarn publish --access public"
+    "release": "tsc && yarn publish --access public"
   },
   "peerDependencies": {
     "babel-polyfill": "^6.26.0",
