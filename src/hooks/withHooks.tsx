@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 function withHooks(WrappedComponent: any, defaultValue: any) {
@@ -13,7 +14,10 @@ function withHooks(WrappedComponent: any, defaultValue: any) {
       <WrappedComponent
         {...props}
         {...{ value, valid }}
-        onChange={({ target }: React.ChangeEvent<HTMLInputElement>, valid: boolean) => {
+        onChange={(
+          { target }: React.ChangeEvent<HTMLInputElement>,
+          valid: boolean
+        ) => {
           setValue(target.value);
           setValidHandler(valid);
         }}

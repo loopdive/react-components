@@ -1,4 +1,4 @@
-import { FunctionComponent, ComponentClass } from "react";
+import React, { FunctionComponent, ComponentClass } from "react";
 import merge from "lodash.merge";
 export * from "./hooks";
 export { default as withHooks } from "./hooks/withHooks";

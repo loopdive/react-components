@@ -1,10 +1,13 @@
+import React from "react";
 import styled from "styled-components";
 
 interface Props {
   children: any;
 }
 
-export default ({ children }: Props) => <CenteredColumn>{children}</CenteredColumn>;
+export default ({ children }: Props) => (
+  <CenteredColumn>{children}</CenteredColumn>
+);
 
 const CenteredColumn = styled.div`
   display: flex;
