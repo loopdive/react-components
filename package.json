@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:interfacers/react-components.git",
-  "author": "Thomas Tränkler <github.com@thomas.traenkler.com>",
+  "author": "Thomas Tränkler <git@thomas.traenkler.com>",
   "contributors": [
     "Thomas Tränkler",
     "Djavan Arrigone"
