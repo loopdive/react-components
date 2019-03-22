@@ -1,0 +1,38 @@
+.content {
+  position: relative;
+  width: 550px;
+  font-family: sans-serif;
+}
+
+.content > div {
+  position: absolute;
+  width: inherit;
+
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  border: 1px solid transparent;
+
+  align-items: center;
+  padding: 0 32px;
+  font-size: 14.5px;
+  background-color: rgb(255, 255, 255, 0.01);
+}
+
+.content > div:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* .content > div:nth-child(1) {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+.content > div:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+.content > div:nth-child(3) {
+  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+}
+.content > div:nth-child(4) {
+  background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+}
+ */

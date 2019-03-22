@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 import styled from "styled-components";
 import { respond } from "../styles";
 import { smallFontSize } from "../styles";
@@ -10,9 +10,9 @@ interface Props {
 export default ({ items }: Props) => (
   <NavigationBar>
     {items.map(({ label, route }) => (
-      <Link key={route} href={route}>
-        <LinkElement>{label}</LinkElement>
-      </Link>
+      /* <Link key={route} href={route}> */
+      <LinkElement>{label}</LinkElement>
+      /* </Link> */
     ))}
   </NavigationBar>
 );
