@@ -74,11 +74,11 @@ const fn = (
 ) => (index: number) =>
   down && index === originalIndex
     ? {
-        y: curIndex * height + y,
+        y: curIndex && y && curIndex * height + y,
         scale: 1.1,
         zIndex: "1",
         shadow: 15,
-        immediate: n => n === "y" || n === "zIndex"
+        immediate: (n: string) => n === "y" || n === "zIndex"
       }
     : {
         y: order.indexOf(index) * height,
