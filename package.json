@@ -1,5 +1,5 @@
 {
-  "name": "react-components",
+  "name": "@interfacers/react-components",
   "description": "reusable react components",
   "version": "0.1.0",
   "main": "index.js",
