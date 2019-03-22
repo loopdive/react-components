@@ -1,8 +1,8 @@
 import { CSSProperties } from "react";
 import { CSSProp } from "styled-components";
-export * from "./abstract/respond";
-export * from "./abstract/layout";
-export * from "./abstract/styles";
+export * from "./respond";
+export * from "./layout";
+export * from "./styles";
 
 export interface StyleProps {
   css?: CSSProp;

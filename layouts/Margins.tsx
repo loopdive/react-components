@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { respond } from "../styles/abstract/respond";
+import { respond } from "../styles/respond";
 
 export default styled.div`
   width: 90%;

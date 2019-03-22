@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 // prettier-ignore
 import {
   defaultFontSize, fontFace, fontFamily, colorWhite
-} from './abstract/styles';
+} from './styles';
 
 const GlobalStyle = createGlobalStyle`
     ${fontFace}
