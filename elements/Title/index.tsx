@@ -1,9 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import DragAndDropBackground from "../../hoc/DragAndDropBackground";
+import DragAndDropBackground from "../DragAndDropBackground";
 import { defaultFontSize, largeFontSize } from "../../styles";
 
-export default ({ headline, subtitle }: { headline: string; subtitle: string }) => {
+export default ({
+  headline,
+  subtitle
+}: {
+  headline: string;
+  subtitle: string;
+}) => {
   return (
     <Layout>
       <EmptySpace />
