@@ -1,0 +1,27 @@
+{
+  "name": "react-components",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:interfacers/react-components.git",
+  "author": "Thomas Tränkler <github.com@thomas.traenkler.com>",
+  "contributors": [
+    "Thomas Tränkler",
+    "Djavan Arrigone"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "lodash-es": "^4.17.11",
+    "lodash-move": "^1.1.1",
+    "lodash.merge": "^4.6.1",
+    "lodash.throttle": "^4.1.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-drag-and-drop": "^3.0.0",
+    "react-icons": "^3.4.0",
+    "react-onclickoutside": "^6.8.0",
+    "react-spring": "^8.0.15",
+    "react-with-gesture": "^4.0.6",
+    "styled-components": "^4.1.3"
+  }
+}
