@@ -1,7 +1,7 @@
 {
   "name": "@interfacers/react-components",
   "description": "reusable react components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:interfacers/react-components.git",
@@ -13,7 +13,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "release": "yarn publish --access public"
   },
   "peerDependencies": {
     "babel-polyfill": "^6.26.0",
@@ -32,20 +33,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "typescript": "^3.3.3333",
-    "babel-polyfill": "^6.26.0",
-    "lodash-es": "^4.17.11",
-    "lodash-move": "^1.1.1",
-    "lodash.merge": "^4.6.1",
-    "lodash.throttle": "^4.1.1",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-drag-and-drop": "^3.0.0",
-    "react-icons": "^3.4.0",
-    "react-onclickoutside": "^6.8.0",
-    "react-spring": "^8.0.15",
-    "react-with-gesture": "^4.0.6",
-    "styled-components": "^4.1.3",
     "@storybook/addon-actions": "^5.0.0",
     "@storybook/addon-info": "^5.0.0",
     "@storybook/addon-links": "^5.0.0",
@@ -63,10 +50,24 @@
     "@types/storybook__react": "^4.0.1",
     "@types/styled-components": "^4.1.12",
     "@types/validator": "^10.9.0",
+    "babel-polyfill": "^6.26.0",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
+    "lodash-es": "^4.17.11",
+    "lodash-move": "^1.1.1",
+    "lodash.merge": "^4.6.1",
+    "lodash.throttle": "^4.1.1",
     "prettier": "^1.16.4",
-    "stylelint": "^9.10.1"
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-drag-and-drop": "^3.0.0",
+    "react-icons": "^3.4.0",
+    "react-onclickoutside": "^6.8.0",
+    "react-spring": "^8.0.15",
+    "react-with-gesture": "^4.0.6",
+    "styled-components": "^4.1.3",
+    "stylelint": "^9.10.1",
+    "typescript": "^3.3.3333"
   },
   "keywords": [
     "react",
