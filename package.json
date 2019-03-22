@@ -1,5 +1,6 @@
 {
   "name": "react-components",
+  "description": "reusable react components",
   "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:interfacers/react-components.git",
