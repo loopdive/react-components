@@ -1,12 +1,12 @@
 {
-  "name": "react-components",
+  "name": "@interfacers/react-components",
   "description": "reusable react components",
   "version": "0.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:interfacers/react-components.git",
   "homepage": "https://github.com/interfacers/react-components",
-  "author": "Thomas Tränkler <git@thomas.traenkler.com>",
+  "author": "Thomas Tränkler",
   "contributors": [
     "Thomas Tränkler",
     "Djavan Arrigone"
