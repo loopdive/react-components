@@ -1,8 +1,8 @@
 import { css } from "styled-components";
-import { respond } from "./_functions";
+import { respond } from "./respond";
 
 export const flexCenterCenter = css`
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
 `;

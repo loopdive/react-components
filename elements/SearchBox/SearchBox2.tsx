@@ -21,7 +21,7 @@ interface Props {
 export default ({ Box, Input }: Props) => {
   return (
     <Box>
-      <Input {...{ label, value, onChange, placeholder }} />
+      <Input />
     </Box>
   );
 };

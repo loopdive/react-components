@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 
 import styled from "styled-components";
 
-export default ({ children, styles, listItems }: { children: any; styles: any; listItems: any }) => {
+export default ({ children, styles, listItems }: { children: any; styles: any; listItems: string[] }) => {
   const [toggle, toggleHandler] = useState(false);
 
   const onMouseEnter = () => {
@@ -16,15 +16,15 @@ export default ({ children, styles, listItems }: { children: any; styles: any; l
     <Fragment>
       <span {...{ onMouseEnter, onMouseLeave }}>
         {children}
-        <DropDown styles={styles} toggle={toggle}>
+        {/* <DropDown styles={styles} toggle={toggle}>
           {listItems && listItems.map(item => <li key={item}>{item}</li>)}
-        </DropDown>
+        </DropDown> */}
       </span>
     </Fragment>
   );
 };
 
-const DropDown = styled.div`
+/* const DropDown = styled.div`
   display: inline-block;
   background: aqua;
   opacity: ${props => (props.toggle ? 1 : 0)};
@@ -34,3 +34,4 @@ const DropDown = styled.div`
   transform: translateY(-0.5rem);
   ${props => props.styles}
 `;
+ */

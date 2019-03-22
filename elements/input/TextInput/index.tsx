@@ -1,7 +1,10 @@
 import React, { ReactNode } from "react";
-import { StyleProps } from "@interfacers/react-components/components/styles";
+import { StyleProps } from "../../../styles";
 
-export type InputProps = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
+export type InputProps = React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>;
 
 export type Props = {
   label?: { children?: ReactNode; text?: string } & StyleProps;
@@ -9,7 +12,6 @@ export type Props = {
 };
 
 export function TextInput(props: Props) {
-
   const label = props && props.label;
   const input = props && props.input;
   return (
