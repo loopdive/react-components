@@ -1,17 +1,22 @@
-const media = (content: string, em: string) => {
-  return `@media screen and (${content}: ${em})`;
-};
+import { css } from "styled-components";
 
-export const respond = (breakpoint: string, content: string) => {
+export const respond = (breakpoint: string, content: any) => {
+  const media = (width: string, em: string) => {
+    return css`@media screen and (${width}: ${em})
+    {
+      ${content}
+    }`;
+  };
+
   switch (breakpoint) {
     case "phone":
-      return `${media("max-width", "37.5em")}{ ${content} }`;
+      return media("max-width", "37.5em");
     case "tab-port":
-      return `${media("max-width", "56.25em")}{ ${content} }`;
+      return media("max-width", "56.25em");
     case "tab-land":
-      return `${media("max-width", "75em")}{ ${content} }`;
+      return media("max-width", "75em");
     case "big-device":
-      return `${media("min-width", "120.1em")}{ ${content} }`;
+      return media("min-width", "120.1em");
     default:
       break;
   }
