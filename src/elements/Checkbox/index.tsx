@@ -2,15 +2,26 @@ import React, { Fragment } from "react";
 
 const Checkbox = ({
   label,
-  input
+  input,
+  box
 }: {
-  input: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
-  label?: React.DetailedHTMLProps<React.LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>;
+  input: React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >;
+  label?: React.DetailedHTMLProps<
+    React.LabelHTMLAttributes<HTMLLabelElement>,
+    HTMLLabelElement
+  >;
+  box?: React.DetailedHTMLProps<
+    React.LabelHTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  >;
 }) => (
-  <Fragment>
+  <div {...box}>
     <input {...input} />
     <label {...label} />
-  </Fragment>
+  </div>
 );
 
 export default Checkbox;
