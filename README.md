@@ -1,2 +1,2 @@
-# @interfacers/react-components
+# @interfacers/reactor
 reusable react components package

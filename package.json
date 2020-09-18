@@ -8,8 +8,7 @@
   "homepage": "https://github.com/interfacers/react-components",
   "author": "Thomas Tränkler",
   "contributors": [
-    "Thomas Tränkler",
-    "Djavan Arrigone"
+    "Thomas Tränkler"
   ],
   "license": "MIT",
   "scripts": {
