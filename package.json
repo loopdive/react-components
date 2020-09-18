@@ -36,10 +36,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
+    "@n8tb1t/use-scroll-position": "^1.0.47",
     "@storybook/addon-actions": "^6.0.21",
-    "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
-    "@storybook/addon-info": "^5.0.5",
     "@storybook/react": "^6.0.21",
     "@types/jest": "^26.0.14",
     "@types/lodash-es": "^4.17.3",
@@ -69,12 +68,18 @@
     "lodash.merge": "^4.6.1",
     "lodash.throttle": "^4.1.1",
     "prettier": "^2.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "styled-components": "^5.1.1",
+    "styled-icons": "^10.20.0",
     "stylelint": "^13.7.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^26.3.0",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "use-onclickoutside": "^0.3.1"
   },
   "keywords": [
     "react",
